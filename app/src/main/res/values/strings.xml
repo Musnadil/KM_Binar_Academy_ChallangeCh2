@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ChallangeChapter2</string>
+    <string name="gopay">gopay</string>
+    <string name="gopaycoins"><b>gopay</b> coins</string>
+    <string name="jumlah_saldo">Rp1.000</string>
+    <string name="klik_cek_riwayat">Klik &amp; cek riwayat</string>
+    <string name="klik_detail">Klik buat detailnya</string>
+    <string name="gopaylater">gopaylater</string>
+    <string name="jumlah_gopaycoins">100</string>
+    <string name="goride">GoRide</string>
+    <string name="gocar">GoCar</string>
+    <string name="gofood">GoFood</string>
+    <string name="gosend">GoSend</string>
+    <string name="gomart">GoMart</string>
+    <string name="gopulsa">GoPulsa</string>
+    <string name="check_in">Check in</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="akses_cepat">Akses cepat</string>
+    <string name="desc_banner1">Aktifkan &amp; Sambungkan GoPay &amp; GoPayLater di Tokopedia</string>
+    <string name="search">Cari layanan, makanan, &amp; tujuan</string>
+    <string name="isi_saldo_shopeepay">Isi Saldo Shopeepay</string>
+    <string name="koin_shopee">5 Koin</string>
+    <string name="klaim_koin">Klaim koin di sini</string>
+    <string name="spayleter">SPayLeter</string>
+    <string name="shopee_local">Shopee Pilih Lokal</string>
+    <string name="shopee_elektronik">Elektronik 100% ORI</string>
+    <string name="pulsa_tagihan_hiburan">Pulsa, Tagihan &amp; Hiburan</string>
+    <string name="in_fashion">inFashion</string>
+    <string name="shopee_cod">Shopee COD</string>
+    <string name="shopee_supermarket">Shopee Supermarket</string>
+    <string name="shopee_murah_lebay">Murah Lebay</string>
+    <string name="gratis_ongkir_voucher">Gratis Ongkir &amp; Voucher</string>
+    <string name="promo_bank">Promo Bank</string>
+    <string name="semua_promo">Semua Promo</string>
+</resources>
