@@ -244,14 +244,13 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="64dp"
                             android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
                             android:layout_margin="16dp"
+                            android:gravity="center_horizontal"
                             android:orientation="vertical"
                             tools:ignore="UseCompoundDrawables">
 
@@ -556,8 +555,8 @@
                 android:id="@+id/more_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/separator">
 
@@ -873,13 +872,12 @@
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:maxLines="1"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
             android:text="@string/rekomendasi"
             android:textColor="@color/orange_shopee"
             app:drawableTint="@color/orange_shopee"
-            app:drawableTopCompat="@drawable/temp_image"
-            tools:ignore="UnusedAttribute"
-            tools:targetApi="m" />
+            app:drawableTopCompat="@drawable/ic_like"
+            tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
@@ -889,10 +887,10 @@
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
             android:text="@string/feed"
             android:textColor="@color/orange_shopee"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_feed"
             tools:ignore="UnusedAttribute" />
 
         <TextView
@@ -903,10 +901,10 @@
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
             android:text="@string/shopee_live"
             android:textColor="@color/orange_shopee"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_live"
             tools:ignore="UnusedAttribute" />
 
         <TextView
@@ -917,10 +915,10 @@
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
             android:text="@string/notifikasi"
             android:textColor="@color/orange_shopee"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_notification"
             tools:ignore="UnusedAttribute" />
 
         <TextView
@@ -931,10 +929,10 @@
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:paddingTop="8dp"
+            android:paddingTop="12dp"
             android:text="@string/saya"
             android:textColor="@color/orange_shopee"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_baseline_person_outline_24"
             tools:ignore="UnusedAttribute" />
 
     </LinearLayout>

@@ -62,10 +62,9 @@
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="64dp"
         android:background="@color/white"
         android:elevation="10dp"
-        android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,36 +73,42 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
+            app:drawableTint="@color/green_gojek"
             android:focusable="true"
+            android:paddingTop="12dp"
             android:fontFamily="@font/poppins_medium"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
+            android:includeFontPadding="true"
             android:text="@string/beranda"
+            android:textColor="@color/green_gojek"
             android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_baseline_home_24"
             tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
+            android:paddingTop="12dp"
             android:focusable="true"
             android:fontFamily="@font/poppins_medium"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/promo"
             android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_discount"
             tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingTop="12dp"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/poppins_medium"
@@ -111,21 +116,23 @@
             android:gravity="center"
             android:text="@string/pesanan"
             android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_history"
             tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="12dp"
             android:layout_weight="1"
             android:clickable="true"
+            app:drawableTint="@color/grey"
             android:focusable="true"
             android:fontFamily="@font/poppins_medium"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/chat"
             android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/temp_image"
+            app:drawableTopCompat="@drawable/ic_chat"
             tools:ignore="UnusedAttribute" />
 
     </LinearLayout>
@@ -712,13 +719,13 @@
                         android:id="@+id/iv_arrow_exp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingEnd="24dp"
+                        android:contentDescription="@string/arrow"
                         android:paddingStart="0dp"
+                        android:paddingEnd="24dp"
                         android:src="@drawable/arrow_forward"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/arrow" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
@@ -730,6 +737,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/akses_cepat"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@id/card_view_exp"
                 app:layout_constraintTop_toBottomOf="@id/card_view_exp" />
@@ -742,13 +750,13 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/akses_cepat"
-                android:focusable="true">
+                app:layout_constraintTop_toBottomOf="@id/akses_cepat">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -759,22 +767,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="true"
+                        android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="8dp"
                         android:weightSum="100"
-                        android:focusable="true"
                         tools:ignore="UnusedAttribute">
 
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="32dp"
-                            android:adjustViewBounds="true"
-                            android:maxWidth="24dp"
                             android:layout_weight="8"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/ic_promo"
+                            android:maxWidth="24dp"
                             android:maxHeight="24dp"
-                            android:src="@drawable/voucher"
-                            android:contentDescription="@string/ic_promo" />
+                            android:src="@drawable/voucher" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -790,11 +798,11 @@
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:maxHeight="16dp"
                             android:layout_weight="5"
-                            android:src="@drawable/arrow_forward"
-                            android:contentDescription="@string/arrow" />
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/arrow"
+                            android:maxHeight="16dp"
+                            android:src="@drawable/arrow_forward" />
 
                     </LinearLayout>
 
@@ -808,22 +816,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="true"
+                        android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="8dp"
                         android:weightSum="100"
-                        android:focusable="true"
                         tools:ignore="UnusedAttribute">
 
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_weight="8"
                             android:layout_height="32dp"
+                            android:layout_weight="8"
                             android:adjustViewBounds="true"
+                            android:contentDescription="@string/resto"
                             android:maxWidth="24dp"
                             android:maxHeight="24dp"
-                            android:src="@drawable/gofoodflat"
-                            android:contentDescription="@string/resto" />
+                            android:src="@drawable/gofoodflat" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -838,12 +846,12 @@
 
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_weight="5"
                             android:layout_height="match_parent"
+                            android:layout_weight="5"
                             android:adjustViewBounds="true"
+                            android:contentDescription="@string/arrow"
                             android:maxHeight="16dp"
-                            android:src="@drawable/arrow_forward"
-                            android:contentDescription="@string/arrow" />
+                            android:src="@drawable/arrow_forward" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -869,8 +877,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/banner_gopay"
-                        android:contentDescription="@string/banner_satu" />
+                        android:contentDescription="@string/banner_satu"
+                        android:src="@drawable/banner_gopay" />
 
                     <TextView
                         android:layout_width="match_parent"
