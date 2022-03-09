@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:outlineSpotShadowColor="@color/transparant"
         app:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,24 +34,28 @@
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:layout_weight="80"
-                    android:background="@color/white"
                     android:weightSum="100">
 
                     <EditText
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="85"
+                        android:autofillHints="search"
                         android:background="@color/white"
                         android:drawableStart="@drawable/ic_search"
-                        android:hint="Buku ternak lele"
+                        android:hint="@string/search_in_shopee"
+                        android:inputType="text"
                         android:paddingStart="8dp"
-                        android:textColorHint="@color/orange_shopee" />
+                        android:paddingEnd="8dp"
+                        android:textColorHint="@color/orange_shopee"
+                        tools:ignore="NestedWeights" />
 
                     <ImageButton
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="15"
                         android:background="@color/white"
+                        android:contentDescription="@string/icon_camera"
                         android:src="@drawable/id_camera" />
                 </LinearLayout>
 
@@ -61,6 +64,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="10"
                     android:background="@color/transparant"
+                    android:contentDescription="@string/icon_cart"
                     android:src="@drawable/ic_baseline_shopping_cart_24" />
 
                 <ImageButton
@@ -68,6 +72,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="10"
                     android:background="@color/transparant"
+                    android:contentDescription="@string/icon_message"
                     android:src="@drawable/ic_chat" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -83,7 +88,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <HorizontalScrollView
                 android:id="@+id/banner"
@@ -96,7 +101,7 @@
                 tools:ignore="MissingConstraints">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="192dp"
                     android:background="@color/orange_shopee"
                     android:gravity="center_vertical"
@@ -108,6 +113,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:contentDescription="@string/banner_satu"
                         android:maxHeight="124dp"
                         android:src="@drawable/banner_satu" />
 
@@ -116,6 +122,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:contentDescription="@string/banner_dua"
                         android:maxHeight="124dp"
                         android:src="@drawable/banner_dua" />
 
@@ -124,6 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:contentDescription="@string/banner_tiga"
                         android:maxHeight="124dp"
                         android:src="@drawable/banner_tiga" />
 
@@ -132,6 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
+                        android:contentDescription="@string/banner_empat"
                         android:maxHeight="124dp"
                         android:src="@drawable/banner_empat" />
                 </LinearLayout>
@@ -159,40 +168,43 @@
                         android:layout_height="match_parent"
                         android:layout_weight="10"
                         android:adjustViewBounds="true"
+                        android:contentDescription="@string/icon_scan"
                         android:maxHeight="32dp"
                         android:src="@drawable/ic_scanner" />
+
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey"
-                        android:layout_marginLeft="8dp"
-                        />
+                        android:layout_marginStart="8dp"
+                        android:background="@color/grey" />
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:layout_weight="45"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_wallet"
                             android:gravity="center_vertical"
                             android:text="@string/jumlah_saldo"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/black"
+                            app:drawableLeftCompat="@drawable/ic_wallet" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/isi_saldo_shopeepay" />
                     </LinearLayout>
+
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="@color/grey"
                         android:layout_marginEnd="8dp"
-                        />
+                        android:background="@color/grey" />
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -202,10 +214,10 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
                             android:gravity="center_vertical"
                             android:text="@string/koin_shopee"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/black"
+                            app:drawableLeftCompat="@drawable/ic_baseline_monetization_on_24" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -239,12 +251,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/shopee_lokal"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/shopee_pilihan_lokal"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -261,12 +275,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/elektronik"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/shopee_elektronik"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -285,12 +301,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/pulsa"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/pulsa_tagihan_hiburan"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -309,12 +327,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/infashion"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/in_fashion"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -332,12 +352,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/supermarket"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/shopee_supermarket"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -363,12 +385,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/shopee_cod"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/shopee_cod"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -387,12 +411,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/shopee_murah_lebay"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/shopee_murah_lebay"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -409,12 +435,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/gratis_ongkir"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/gratis_ongkir_voucher"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -433,12 +461,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/promo_bank"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/promo_bank"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -455,12 +485,14 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:id="@+id/semua_promo"
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
+                                android:contentDescription="@string/semua_promo"
                                 android:src="@drawable/temp_image" />
 
                             <TextView
@@ -491,6 +523,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="30"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/banner_kiri"
                     android:src="@drawable/banner_kiri" />
 
                 <ImageView
@@ -499,6 +532,7 @@
                     android:layout_marginHorizontal="8dp"
                     android:layout_weight="40"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/banner_tengah"
                     android:src="@drawable/banner_tengah" />
 
                 <ImageView
@@ -506,6 +540,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="30"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/banner_kanan"
                     android:src="@drawable/banner_kanan" />
             </LinearLayout>
 
@@ -520,7 +555,8 @@
                 android:id="@+id/more_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/separator">
 
@@ -528,6 +564,7 @@
                     android:id="@+id/img_flashsale"
                     android:layout_width="wrap_content"
                     android:layout_height="16dp"
+                    android:contentDescription="@string/img_flashsale"
                     android:src="@drawable/temp_image"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -536,9 +573,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/arrow_forward"
-                    android:text="Lihat Lainnya"
+                    android:text="@string/lihat_lainnya"
                     android:theme="@style/Smaller_Drawable"
+                    app:drawableEndCompat="@drawable/arrow_forward"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -548,9 +585,9 @@
                 android:id="@+id/hsv_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fillViewport="true"
                 android:scrollbars="none"
-                android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@id/more_flashsale">
 
                 <LinearLayout
@@ -573,6 +610,7 @@
                                 android:id="@+id/img_fs1"
                                 android:layout_width="128dp"
                                 android:layout_height="128dp"
+                                android:contentDescription="@string/fs_one"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/temp_image"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -582,7 +620,7 @@
                                 android:id="@+id/harga_fs1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rp400.000"
+                                android:text="@string/price_fs_one"
                                 android:textColor="@color/orange_shopee"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -607,7 +645,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="9 TERJUAL"
+                                android:text="@string/count_fs_one"
                                 android:textColor="@color/white"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual"
@@ -626,12 +664,14 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            tools:ignore="TooManyViews">
 
                             <ImageView
                                 android:id="@+id/img_fs2"
                                 android:layout_width="128dp"
                                 android:layout_height="128dp"
+                                android:contentDescription="@string/fs_two"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/temp_image"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -641,7 +681,7 @@
                                 android:id="@+id/harga_fs2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rp250.000"
+                                android:text="@string/price_fs_two"
                                 android:textColor="@color/orange_shopee"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -666,7 +706,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="HAMPIR HABIS"
+                                android:text="@string/hampir_habis"
                                 android:textColor="@color/white"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual2"
@@ -691,6 +731,7 @@
                                 android:id="@+id/img_fs3"
                                 android:layout_width="128dp"
                                 android:layout_height="128dp"
+                                android:contentDescription="@string/fs_three"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/temp_image"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -700,7 +741,7 @@
                                 android:id="@+id/harga_fs3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rp50.000"
+                                android:text="@string/price_fs_three"
                                 android:textColor="@color/orange_shopee"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -725,7 +766,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="100 TERJUAL"
+                                android:text="@string/count_fs_three"
                                 android:textColor="@color/white"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual3"
@@ -750,6 +791,7 @@
                                 android:id="@+id/img_fs4"
                                 android:layout_width="128dp"
                                 android:layout_height="128dp"
+                                android:contentDescription="@string/fs_four"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/temp_image"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -759,7 +801,7 @@
                                 android:id="@+id/harga_fs4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rp50.000"
+                                android:text="@string/fs_three"
                                 android:textColor="@color/orange_shopee"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -784,7 +826,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="HAMPIR HABIS"
+                                android:text="@string/hampir_habis"
                                 android:textColor="@color/white"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual4"
@@ -825,63 +867,74 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:drawableTop="@drawable/temp_image"
-            android:drawableTint="@color/orange_shopee"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:text="Rekomendasi"
-            android:maxLines="1"
             android:ellipsize="end"
-            android:textColor="@color/orange_shopee"/>
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="8dp"
+            android:text="@string/rekomendasi"
+            android:textColor="@color/orange_shopee"
+            app:drawableTint="@color/orange_shopee"
+            app:drawableTopCompat="@drawable/temp_image"
+            tools:ignore="UnusedAttribute"
+            tools:targetApi="m" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:paddingTop="8dp"
-            android:drawableTop="@drawable/temp_image"
+            android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="Feed"
-            android:textColor="@color/orange_shopee"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:paddingTop="8dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:drawableTop="@drawable/temp_image"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="Shopee Live"
-            android:textColor="@color/orange_shopee"/>
+            android:text="@string/feed"
+            android:textColor="@color/orange_shopee"
+            app:drawableTopCompat="@drawable/temp_image"
+            tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingTop="8dp"
             android:clickable="true"
-            android:drawableTop="@drawable/temp_image"
+            android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="Notifikasi"
-            android:textColor="@color/orange_shopee"/>
+            android:paddingTop="8dp"
+            android:text="@string/shopee_live"
+            android:textColor="@color/orange_shopee"
+            app:drawableTopCompat="@drawable/temp_image"
+            tools:ignore="UnusedAttribute" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:paddingTop="8dp"
             android:layout_weight="1"
             android:clickable="true"
-            android:drawableTop="@drawable/temp_image"
+            android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="Saya"
-            android:textColor="@color/orange_shopee"/>
+            android:paddingTop="8dp"
+            android:text="@string/notifikasi"
+            android:textColor="@color/orange_shopee"
+            app:drawableTopCompat="@drawable/temp_image"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="@string/saya"
+            android:textColor="@color/orange_shopee"
+            app:drawableTopCompat="@drawable/temp_image"
+            tools:ignore="UnusedAttribute" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
