@@ -62,4 +62,21 @@
     <string name="shopee_live">Shopee Live</string>
     <string name="notifikasi">Notifikasi</string>
     <string name="saya">Saya</string>
+    <string name="beranda">Beranda</string>
+    <string name="promo">Promo</string>
+    <string name="pesanan">Pesanan</string>
+    <string name="chat">Chat</string>
+    <string name="gopay_leter">Pesen sekarang, bayar akhir bulan</string>
+    <string name="bayar">Bayar</string>
+    <string name="isi_saldo">Isi Saldo</string>
+    <string name="eksplor">Eksplor</string>
+    <string name="card_exp">card_exp</string>
+    <string name="star_exp">star_exp</string>
+    <string name="exp_gojek">98 XP lagi ada Harta Karun</string>
+    <string name="arrow">arrow</string>
+    <string name="ic_promo">ic_promo</string>
+    <string name="judul_voucher">Ada voucher nganggur, nih</string>
+    <string name="resto">resto</string>
+    <string name="restoran_terdekat">Restoran terdekat</string>
+    <string name="judul_banner_satu">Makin Seru</string>
 </resources>
