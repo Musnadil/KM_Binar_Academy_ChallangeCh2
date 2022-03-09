@@ -4,29 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-    >
+    tools:context=".MainActivity">
 
-    <com.google.android.material.button.MaterialButton
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/btn_shopee"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
-        android:text="Shopee"
-        android:backgroundTint="@color/orange_shopee"
-        app:cornerRadius="32dp"
-        android:elevation="10dp"
-        />
-    <com.google.android.material.button.MaterialButton
+        android:layout_height="96dp"
+        app:cardCornerRadius="24dp"
+        app:strokeColor="@color/orange_shopee"
+        app:strokeWidth="6dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopee_logo"
+                android:maxWidth="155dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/btn_gojek"
         android:layout_width="256dp"
-        android:layout_height="wrap_content"
-        android:text="Gojek"
-        android:backgroundTint="@color/green_gojek"
-        app:cornerRadius="32dp"
-        android:elevation="10dp"
-        />
+        android:layout_height="96dp"
+        android:padding="16dp"
+        app:cardCornerRadius="24dp"
+        app:strokeColor="@color/green_gojek"
+        app:strokeWidth="6dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gojek_logo"
+                android:maxWidth="128dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-        val actionbar = supportActionBar
-        actionbar?.hide()
 
         viewBinding.btnShopee.setOnClickListener {
             startActivity(Intent(this,Shopee::class.java))

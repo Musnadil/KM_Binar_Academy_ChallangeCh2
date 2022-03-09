@@ -177,7 +177,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/temp_image"
+                            android:drawableLeft="@drawable/ic_wallet"
                             android:gravity="center_vertical"
                             android:text="@string/jumlah_saldo"
                             android:textColor="@color/black" />
@@ -202,7 +202,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/temp_image"
+                            android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
                             android:gravity="center_vertical"
                             android:text="@string/koin_shopee"
                             android:textColor="@color/black" />
@@ -520,7 +520,7 @@
                 android:id="@+id/more_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/separator">
 
@@ -822,12 +822,14 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
             android:drawableTop="@drawable/temp_image"
+            android:drawableTint="@color/orange_shopee"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
+            android:paddingTop="8dp"
             android:text="Rekomendasi"
             android:maxLines="1"
             android:ellipsize="end"
@@ -835,9 +837,10 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
+            android:paddingTop="8dp"
             android:drawableTop="@drawable/temp_image"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
@@ -846,7 +849,8 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
             android:layout_weight="1"
             android:clickable="true"
             android:drawableTop="@drawable/temp_image"
@@ -857,8 +861,9 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingTop="8dp"
             android:clickable="true"
             android:drawableTop="@drawable/temp_image"
             android:foreground="?attr/selectableItemBackground"
@@ -868,7 +873,8 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
             android:layout_weight="1"
             android:clickable="true"
             android:drawableTop="@drawable/temp_image"
