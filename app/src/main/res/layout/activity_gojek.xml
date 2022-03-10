@@ -58,84 +58,6 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--    bottom nav-->
-    <LinearLayout
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/white"
-        android:elevation="10dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_medium"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:includeFontPadding="true"
-            android:paddingTop="12dp"
-            android:text="@string/beranda"
-            android:textColor="@color/green_gojek"
-            android:textFontWeight="600"
-            app:drawableTint="@color/green_gojek"
-            app:drawableTopCompat="@drawable/ic_baseline_home_24"
-            tools:ignore="UnusedAttribute" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_medium"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="12dp"
-            android:text="@string/promo"
-            android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/ic_discount"
-            tools:ignore="UnusedAttribute" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_medium"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="12dp"
-            android:text="@string/pesanan"
-            android:textFontWeight="600"
-            app:drawableTopCompat="@drawable/ic_history"
-            tools:ignore="UnusedAttribute" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_medium"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="12dp"
-            android:text="@string/chat"
-            android:textFontWeight="600"
-            app:drawableTint="@color/grey"
-            app:drawableTopCompat="@drawable/ic_chat"
-            tools:ignore="UnusedAttribute" />
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -172,131 +94,115 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <!--                    card view 1-->
-                        <androidx.cardview.widget.CardView
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="64dp"
                             android:layout_marginHorizontal="16dp"
                             android:layout_marginTop="16dp"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="10dp">
+                            android:background="@drawable/rounded_card"
+                            android:orientation="vertical"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="0dp">
 
-                            <LinearLayout
+                            <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_marginVertical="2dp"
-                                android:orientation="vertical">
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/gopaycoins"
+                                android:textColor="@color/black"
+                                app:drawableStartCompat="@drawable/ic_wallet"
+                                app:drawableTint="@color/blue"
+                                tools:ignore="UnusedAttribute" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/gopaycoins"
-                                    android:textColor="@color/black"
-                                    app:drawableStartCompat="@drawable/ic_wallet"
-                                    app:drawableTint="@color/blue"
-                                    tools:ignore="UnusedAttribute" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="@string/jumlah_gopaycoins"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="@string/jumlah_gopaycoins"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/klik_detail"
-                                    android:textColor="@color/green_gojek"
-                                    android:textFontWeight="900"
-                                    android:textSize="12sp"
-                                    tools:ignore="UnusedAttribute" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/klik_detail"
+                                android:textColor="@color/green_gojek"
+                                android:textFontWeight="900"
+                                android:textSize="12sp"
+                                tools:ignore="UnusedAttribute" />
+                        </LinearLayout>
                         <!--                    card view 2-->
-                        <androidx.cardview.widget.CardView
+
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="64dp"
                             android:layout_marginHorizontal="16dp"
                             android:layout_marginTop="16dp"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="10dp">
+                            android:background="@drawable/rounded_card"
+                            android:orientation="vertical"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="0dp">
 
-                            <LinearLayout
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="@string/gopaylater"
+                                android:textColor="@color/black"
+                                app:drawableStartCompat="@drawable/ic_wallet"
+                                app:drawableTint="@color/blue"
+                                tools:ignore="UnusedAttribute" />
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_marginVertical="2dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="@string/gopaylater"
-                                    android:textColor="@color/black"
-                                    app:drawableStartCompat="@drawable/ic_wallet"
-                                    app:drawableTint="@color/blue"
-                                    tools:ignore="UnusedAttribute" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:text="@string/gopay_leter"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/gopay_leter"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
                         <!--                    card view 3-->
-                        <androidx.cardview.widget.CardView
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="64dp"
-                            android:layout_marginHorizontal="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="10dp">
+                            android:layout_margin="16dp"
+                            android:background="@drawable/rounded_card"
+                            android:orientation="vertical"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="0dp">
 
-                            <LinearLayout
+                            <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_marginVertical="2dp"
-                                android:orientation="vertical">
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/gopay"
+                                android:textColor="@color/black"
+                                app:drawableStartCompat="@drawable/ic_wallet"
+                                app:drawableTint="@color/blue"
+                                tools:ignore="TooDeepLayout" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/gopay"
-                                    android:textColor="@color/black"
-                                    app:drawableStartCompat="@drawable/ic_wallet"
-                                    app:drawableTint="@color/blue"
-                                    tools:ignore="TooDeepLayout" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="@string/jumlah_saldo"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="@string/jumlah_saldo"
-                                    android:textColor="@color/black"
-                                    android:textSize="12sp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:text="@string/klik_cek_riwayat"
-                                    android:textColor="@color/green_gojek"
-                                    android:textFontWeight="900"
-                                    android:textSize="12sp"
-                                    tools:ignore="UnusedAttribute" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/klik_cek_riwayat"
+                                android:textColor="@color/green_gojek"
+                                android:textFontWeight="900"
+                                android:textSize="12sp"
+                                tools:ignore="UnusedAttribute" />
+                        </LinearLayout>
                     </LinearLayout>
 
                 </androidx.core.widget.NestedScrollView>
@@ -633,14 +539,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!--        expbar card view-->
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/card_view_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/grid_layout_fitur">
@@ -652,64 +556,58 @@
                     android:contentDescription="@string/card_exp"
                     android:src="@drawable/go_club_bg" />
 
+                <ImageView
+                    android:id="@+id/starxp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/star_exp"
+                    android:maxHeight="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:src="@drawable/goclub"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TooManyViews" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/exp_gojek"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/starxp"
+                    app:layout_constraintTop_toTopOf="@id/starxp" />
 
-                    <ImageView
-                        android:id="@+id/starxp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/star_exp"
-                        android:maxHeight="48dp"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="0dp"
-                        android:src="@drawable/goclub"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="TooManyViews" />
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="24dp"
+                    android:progress="16"
+                    app:indicatorColor="@color/green_gojek"
+                    app:layout_constraintEnd_toStartOf="@id/iv_arrow_exp"
+                    app:layout_constraintStart_toStartOf="@id/tv_exp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp"
+                    app:trackCornerRadius="16dp" />
 
-                    <TextView
-                        android:id="@+id/tv_exp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="0dp"
-                        android:text="@string/exp_gojek"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toEndOf="@id/starxp"
-                        app:layout_constraintTop_toTopOf="@id/starxp" />
+                <ImageView
+                    android:id="@+id/iv_arrow_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/arrow"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="24dp"
+                    android:src="@drawable/arrow_forward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.progressindicator.LinearProgressIndicator
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="24dp"
-                        android:progress="16"
-                        app:indicatorColor="@color/green_gojek"
-                        app:layout_constraintEnd_toStartOf="@id/iv_arrow_exp"
-                        app:layout_constraintStart_toStartOf="@id/tv_exp"
-                        app:layout_constraintTop_toBottomOf="@id/tv_exp"
-                        app:trackCornerRadius="16dp" />
-
-                    <ImageView
-                        android:id="@+id/iv_arrow_exp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/arrow"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="24dp"
-                        android:src="@drawable/arrow_forward"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/akses_cepat"
@@ -838,50 +736,45 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:id="@+id/card_banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="16dp"
+                android:background="@drawable/rounded_edit_text"
+                android:elevation="4dp"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_promo">
+                app:layout_constraintTop_toBottomOf="@id/card_promo"
+                tools:ignore="TooManyViews">
 
-                <LinearLayout
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/banner_satu"
+                    android:src="@drawable/banner_gopay" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/banner_satu"
-                        android:src="@drawable/banner_gopay" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/judul_banner_satu"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
-                        android:paddingHorizontal="16dp"
-                        android:paddingTop="8dp"
-                        android:text="@string/judul_banner_satu"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingHorizontal="16dp"
-                        android:paddingBottom="16dp"
-                        android:text="@string/desc_banner1"
-                        android:textColor="@color/black"
-
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/desc_banner1"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -890,4 +783,82 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+    <!--    bottom nav-->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TooManyViews">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:includeFontPadding="true"
+            android:paddingTop="12dp"
+            android:text="@string/beranda"
+            android:textColor="@color/green_gojek"
+            android:textFontWeight="600"
+            app:drawableTint="@color/green_gojek"
+            app:drawableTopCompat="@drawable/ic_baseline_home_24"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text="@string/promo"
+            android:textFontWeight="600"
+            app:drawableTopCompat="@drawable/ic_discount"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text="@string/pesanan"
+            android:textFontWeight="600"
+            app:drawableTopCompat="@drawable/ic_history"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text="@string/chat"
+            android:textFontWeight="600"
+            app:drawableTint="@color/grey"
+            app:drawableTopCompat="@drawable/ic_chat"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

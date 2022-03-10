@@ -590,254 +590,239 @@
                 android:scrollbars="none"
                 app:layout_constraintTop_toBottomOf="@id/more_flashsale">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="8dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp">
 
-                    <androidx.cardview.widget.CardView
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fs1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        app:cardElevation="@null">
+                        android:paddingHorizontal="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_fs1"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:contentDescription="@string/fs_one"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/temp_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <ImageView
-                                android:id="@+id/img_fs1"
-                                android:layout_width="128dp"
-                                android:layout_height="128dp"
-                                android:contentDescription="@string/fs_one"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/temp_image"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/harga_fs1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_fs_one"
+                            android:textColor="@color/orange_shopee"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_fs1" />
 
-                            <TextView
-                                android:id="@+id/harga_fs1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/price_fs_one"
-                                android:textColor="@color/orange_shopee"
-                                android:textSize="18sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/img_fs1" />
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressbar_terjual"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginTop="4dp"
+                            android:progress="20"
+                            app:indicatorColor="@color/orange_shopee"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/harga_fs1"
+                            app:trackCornerRadius="16dp"
+                            app:trackThickness="16dp" />
 
-                            <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressbar_terjual"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginTop="4dp"
-                                android:progress="20"
-                                app:indicatorColor="@color/orange_shopee"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/harga_fs1"
-                                app:trackCornerRadius="16dp"
-                                app:trackThickness="16dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/count_fs_one"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual"
-                                app:layout_constraintEnd_toEndOf="@id/progressbar_terjual"
-                                app:layout_constraintStart_toStartOf="@id/progressbar_terjual"
-                                app:layout_constraintTop_toTopOf="@id/progressbar_terjual" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        app:cardElevation="@null">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            tools:ignore="TooManyViews">
+                            android:text="@string/count_fs_one"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual"
+                            app:layout_constraintEnd_toEndOf="@id/progressbar_terjual"
+                            app:layout_constraintStart_toStartOf="@id/progressbar_terjual"
+                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <ImageView
-                                android:id="@+id/img_fs2"
-                                android:layout_width="128dp"
-                                android:layout_height="128dp"
-                                android:contentDescription="@string/fs_two"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/temp_image"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/harga_fs2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/price_fs_two"
-                                android:textColor="@color/orange_shopee"
-                                android:textSize="18sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/img_fs2" />
-
-                            <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressbar_terjual2"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginTop="4dp"
-                                android:progress="90"
-                                app:indicatorColor="@color/orange_shopee"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/harga_fs2"
-                                app:trackCornerRadius="16dp"
-                                app:trackThickness="16dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/hampir_habis"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual2"
-                                app:layout_constraintEnd_toEndOf="@id/progressbar_terjual2"
-                                app:layout_constraintStart_toStartOf="@id/progressbar_terjual2"
-                                app:layout_constraintTop_toTopOf="@id/progressbar_terjual2" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fs2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        app:cardElevation="@null">
+                        android:paddingHorizontal="4dp"
+                        app:layout_constraintStart_toEndOf="@id/fs1"
+                        app:layout_constraintTop_toTopOf="@id/fs1">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <ImageView
+                            android:id="@+id/img_fs2"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:contentDescription="@string/fs_two"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/temp_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/harga_fs2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_fs_two"
+                            android:textColor="@color/orange_shopee"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_fs2"
+                            tools:ignore="TooManyViews" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressbar_terjual2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginTop="4dp"
+                            android:progress="90"
+                            app:indicatorColor="@color/orange_shopee"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/harga_fs2"
+                            app:trackCornerRadius="16dp"
+                            app:trackThickness="16dp" />
+
+                        <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:text="@string/hampir_habis"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual2"
+                            app:layout_constraintEnd_toEndOf="@id/progressbar_terjual2"
+                            app:layout_constraintStart_toStartOf="@id/progressbar_terjual2"
+                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <ImageView
-                                android:id="@+id/img_fs3"
-                                android:layout_width="128dp"
-                                android:layout_height="128dp"
-                                android:contentDescription="@string/fs_three"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/temp_image"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/harga_fs3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/price_fs_three"
-                                android:textColor="@color/orange_shopee"
-                                android:textSize="18sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/img_fs3" />
-
-                            <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressbar_terjual3"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginTop="4dp"
-                                android:progress="80"
-                                app:indicatorColor="@color/orange_shopee"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/harga_fs3"
-                                app:trackCornerRadius="16dp"
-                                app:trackThickness="16dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/count_fs_three"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual3"
-                                app:layout_constraintEnd_toEndOf="@id/progressbar_terjual3"
-                                app:layout_constraintStart_toStartOf="@id/progressbar_terjual3"
-                                app:layout_constraintTop_toTopOf="@id/progressbar_terjual3" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fs3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        app:cardElevation="@null">
+                        android:paddingHorizontal="4dp"
+                        app:layout_constraintStart_toEndOf="@id/fs2"
+                        app:layout_constraintTop_toTopOf="@id/fs2">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
+                        <ImageView
+                            android:id="@+id/img_fs3"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:contentDescription="@string/fs_three"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/temp_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/harga_fs3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_fs_three"
+                            android:textColor="@color/orange_shopee"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_fs3" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressbar_terjual3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginTop="4dp"
+                            android:progress="80"
+                            app:indicatorColor="@color/orange_shopee"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/harga_fs3"
+                            app:trackCornerRadius="16dp"
+                            app:trackThickness="16dp" />
+
+                        <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:text="@string/count_fs_three"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual3"
+                            app:layout_constraintEnd_toEndOf="@id/progressbar_terjual3"
+                            app:layout_constraintStart_toStartOf="@id/progressbar_terjual3"
+                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <ImageView
-                                android:id="@+id/img_fs4"
-                                android:layout_width="128dp"
-                                android:layout_height="128dp"
-                                android:contentDescription="@string/fs_four"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/temp_image"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:id="@+id/harga_fs4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/fs_three"
-                                android:textColor="@color/orange_shopee"
-                                android:textSize="18sp"
-                                android:textStyle="bold"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/img_fs4" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fs4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="4dp"
+                        app:layout_constraintStart_toEndOf="@id/fs3"
+                        app:layout_constraintTop_toTopOf="@id/fs3">
 
-                            <com.google.android.material.progressindicator.LinearProgressIndicator
-                                android:id="@+id/progressbar_terjual4"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginTop="4dp"
-                                android:progress="98"
-                                app:indicatorColor="@color/orange_shopee"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/harga_fs4"
-                                app:trackCornerRadius="16dp"
-                                app:trackThickness="16dp" />
+                        <ImageView
+                            android:id="@+id/img_fs4"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:contentDescription="@string/fs_four"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/temp_image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/hampir_habis"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual4"
-                                app:layout_constraintEnd_toEndOf="@id/progressbar_terjual4"
-                                app:layout_constraintStart_toStartOf="@id/progressbar_terjual4"
-                                app:layout_constraintTop_toTopOf="@id/progressbar_terjual4" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/harga_fs4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fs_three"
+                            android:textColor="@color/orange_shopee"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_fs4" />
 
-                    </androidx.cardview.widget.CardView>
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressbar_terjual4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginTop="4dp"
+                            android:progress="98"
+                            app:indicatorColor="@color/orange_shopee"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/harga_fs4"
+                            app:trackCornerRadius="16dp"
+                            app:trackThickness="16dp" />
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hampir_habis"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual4"
+                            app:layout_constraintEnd_toEndOf="@id/progressbar_terjual4"
+                            app:layout_constraintStart_toStartOf="@id/progressbar_terjual4"
+                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </HorizontalScrollView>
