@@ -33,5 +33,11 @@
         <item name="android:scaleY">0.6</item>
     </style>
 
+    <style name="gojek">
+        <item name="android:textSize">24sp</item>
+        <item name="android:scaleX">0.7</item>
+        <item name="android:scaleY">0.7</item>
+    </style>
+
 
 </resources>
