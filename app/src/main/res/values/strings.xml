@@ -79,4 +79,6 @@
     <string name="resto">resto</string>
     <string name="restoran_terdekat">Restoran terdekat</string>
     <string name="judul_banner_satu">Makin Seru</string>
+    <string name="logo_shopee">logo_shopee</string>
+    <string name="logo_gojek">logo_gojek</string>
 </resources>

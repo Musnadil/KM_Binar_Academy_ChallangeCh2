@@ -229,283 +229,303 @@
 
             <HorizontalScrollView
                 android:id="@+id/horizontal_scrollview_fitur_shopee"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fillViewport="true"
-                android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/card_saldo">
+                app:layout_constraintTop_toBottomOf="@id/card_saldo"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
 
-                <GridLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/grid_layout_shopee"
                     android:layout_width="wrap_content"
+                    android:minWidth="512dp"
                     android:layout_height="wrap_content"
-                    android:columnCount="1">
+                    android:paddingVertical="16dp">
+
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/pilihanlokal"
+                        android:layout_width="64dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_elektronik">
 
-                        <LinearLayout
-                            android:layout_width="64dp"
+                        <ImageView
+                            android:id="@+id/shopee_lokal"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/shopee_pilihan_lokal"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/shopee_lokal"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/shopee_pilihan_lokal"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/shopee_local"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/elektronik"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/shopee_elektronik"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:ellipsize="end"
-                                android:maxLines="2"
-                                android:text="@string/shopee_elektronik"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/pulsa"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/pulsa_tagihan_hiburan"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:ellipsize="end"
-                                android:maxLines="2"
-                                android:text="@string/pulsa_tagihan_hiburan"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/infashion"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/in_fashion"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/in_fashion"
-                                android:textAlignment="center"
-
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/supermarket"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/shopee_supermarket"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:ellipsize="end"
-                                android:maxLines="2"
-                                android:text="@string/shopee_supermarket"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
+                            android:paddingTop="8dp"
+                            android:text="@string/shopee_local"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/shopee_elektronik"
+                        android:layout_width="64dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/pilihanlokal"
+                        app:layout_constraintStart_toEndOf="@id/pilihanlokal"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_pulsa">
 
-                        <LinearLayout
-                            android:layout_width="64dp"
+                        <ImageView
+                            android:id="@+id/elektronik"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/shopee_elektronik"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/shopee_cod"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/shopee_cod"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:ellipsize="end"
-                                android:maxLines="2"
-                                android:text="@string/shopee_cod"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/shopee_murah_lebay"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/shopee_murah_lebay"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/shopee_murah_lebay"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/gratis_ongkir"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/gratis_ongkir_voucher"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:ellipsize="end"
-                                android:maxLines="2"
-                                android:text="@string/gratis_ongkir_voucher"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/promo_bank"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/promo_bank"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/promo_bank"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="64dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            tools:ignore="UseCompoundDrawables">
-
-                            <ImageView
-                                android:id="@+id/semua_promo"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                android:contentDescription="@string/semua_promo"
-                                android:src="@drawable/temp_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/semua_promo"
-                                android:textAlignment="center"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
+                            android:paddingTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/shopee_elektronik"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
                     </LinearLayout>
-                </GridLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_pulsa"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/shopee_elektronik"
+                        app:layout_constraintStart_toEndOf="@id/shopee_elektronik"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_infashion">
+
+                        <ImageView
+                            android:id="@+id/pulsa"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/pulsa_tagihan_hiburan"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/pulsa_tagihan_hiburan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_infashion"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/shopee_pulsa"
+                        app:layout_constraintStart_toEndOf="@id/shopee_pulsa"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_supermarket">
+
+                        <ImageView
+                            android:id="@+id/infashion"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/in_fashion"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/in_fashion"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_supermarket"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/shopee_infashion"
+                        app:layout_constraintStart_toEndOf="@id/shopee_infashion"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/supermarket"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/shopee_supermarket"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/shopee_supermarket"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cod"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toBottomOf="@id/pilihanlokal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/murah_lebay">
+
+                        <ImageView
+                            android:id="@+id/shopee_cod"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/shopee_cod"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/shopee_cod"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/murah_lebay"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/cod"
+                        app:layout_constraintStart_toEndOf="@id/cod"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_gratis_ongkir">
+
+                        <ImageView
+                            android:id="@+id/shopee_murah_lebay"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/shopee_murah_lebay"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/shopee_murah_lebay"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_gratis_ongkir"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/murah_lebay"
+                        app:layout_constraintStart_toEndOf="@id/murah_lebay"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_promo_bank">
+
+                        <ImageView
+                            android:id="@+id/gratis_ongkir"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/gratis_ongkir_voucher"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/gratis_ongkir_voucher"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_promo_bank"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/shopee_gratis_ongkir"
+                        app:layout_constraintStart_toEndOf="@id/shopee_gratis_ongkir"
+                        app:layout_constraintEnd_toStartOf="@id/shopee_semua_promo">
+
+                        <ImageView
+                            android:id="@+id/promo_bank"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/promo_bank"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/promo_bank"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shopee_semua_promo"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables"
+                        app:layout_constraintTop_toTopOf="@id/shopee_promo_bank"
+                        app:layout_constraintStart_toEndOf="@id/shopee_promo_bank"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/semua_promo"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="@string/semua_promo"
+                            android:src="@drawable/temp_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="@string/semua_promo"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
 
             <LinearLayout
@@ -555,8 +575,8 @@
                 android:id="@+id/more_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/separator">
 
@@ -585,7 +605,7 @@
                 android:id="@+id/hsv_flashsale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
                 android:fillViewport="true"
                 android:scrollbars="none"
                 app:layout_constraintTop_toBottomOf="@id/more_flashsale">
@@ -706,7 +726,8 @@
                             app:layout_constraintBottom_toBottomOf="@id/progressbar_terjual2"
                             app:layout_constraintEnd_toEndOf="@id/progressbar_terjual2"
                             app:layout_constraintStart_toStartOf="@id/progressbar_terjual2"
-                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual2" />
+                            app:layout_constraintTop_toTopOf="@id/progressbar_terjual2"
+                            tools:ignore="TooManyViews" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
